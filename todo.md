@@ -18,8 +18,7 @@ https://realworld-docs.netlify.app/docs/implementation-creation/features
 
 - [ ] implement error handling for the api:
   - [ ] model
-    - [Models/GenericErrorModel_errors](docs/api/Models/GenericErrorModel_errors.md)
-    - [Models/GenericErrorModel](docs/api/Models/GenericErrorModel.md)
+    - run `just docs` to see the API documentation, information about the models is at the bottom of the page
   - [ ] 422 if a request fails any validations
   - [ ] 400 for a badly formed request
   - [ ] 401 for Unauthorized requests, when a request requires authentication but it isn't provided
@@ -41,14 +40,7 @@ https://realworld-docs.netlify.app/docs/specs/backend-specs/error-handling
 
 - [ ] implement api for [endpoint "User and Authentication"](docs/api/Apis/UserAndAuthenticationApi.md):
   - [ ] model data for /user endpoint, use model api docs to help:
-    - [Models/Login_200_response](docs/api/Models/Login_200_response.md)
-    - [Models/Login_request](docs/api/Models/Login_request.md)
-    - [Models/LoginUser](docs/api/Models/LoginUser.md)
-    - [Models/NewUser](docs/api/Models/NewUser.md)
-    - [Models/UpdateCurrentUser_request](docs/api/Models/UpdateCurrentUser_request.md)
-    - [Models/UpdateUser](docs/api/Models/UpdateUser.md)
-    - [Models/User](docs/api/Models/User.md)
-    - [Models/CreateUser_request](docs/api/Models/CreateUser_request.md)
+    - run `just docs` to see the API documentation, information about the models is at the bottom of the page
   - [ ] POST /users/login -> Existing user login
   - [ ] POST  /users ->  Create a user
   - [ ] GET   /user  -> Get current user
@@ -56,26 +48,20 @@ https://realworld-docs.netlify.app/docs/specs/backend-specs/error-handling
 
 - [ ] implement api for [endpoint "Tags"](docs/api/Apis/TagsApi.md):
   - [ ] model data for /tags endpoint
-    - [Models/GetTags_200_response](docs/api/Models/GetTags_200_response.md)
+    - run `just docs` to see the API documentation, information about the models is at the bottom of the page
   - [ ] GET   /tags  -> Get tags
 
 
 - [ ] implement api for [endpoint "Profile"](docs/api/Apis/ProfileApi.md):
   - [ ] model data for /profiles endpoint, use model api docs to help:
-    - [Models/Profile](docs/api/Models/Profile.md)
-    - [Models/GetProfileByUsername_200_response](docs/api/Models/GetProfileByUsername_200_response.md)
+    - run `just docs` to see the API documentation, information about the models is at the bottom of the page
   - [ ] GET   /profiles/{username}  -> Get a profile
   - [ ] POST   /profiles/{username}/follow  -> Follow a user
   - [ ] DELETE   /profiles/{username}/follow  -> Unfollow a user
 
 - [ ] implement api for [endpoint "Articles"](docs/api/Apis/ArticlesApi.md):
   - [ ] model data for /articles endpoint, use model api docs to help:
-    - [Models/Article](docs/api/Models/Article.md)
-    - [Models/CreateArticle_201_response](docs/api/Models/CreateArticle_201_response.md)
-    - [Models/CreateArticle_request](docs/api/Models/CreateArticle_request.md)
-    - [Models/NewArticle](docs/api/Models/NewArticle.md)
-    - [Models/UpdateArticle](docs/api/Models/UpdateArticle.md)
-    - [Models/UpdateArticle_request](docs/api/Models/UpdateArticle_request.md)
+    - run `just docs` to see the API documentation, information about the models is at the bottom of the page
   - [ ] GET   /articles/feed  -> Get recent articles from users you follow
   - [ ] GET   /articles  -> Get recent articles globally
   - [ ] POST   /articles  -> Create an article
@@ -85,17 +71,13 @@ https://realworld-docs.netlify.app/docs/specs/backend-specs/error-handling
 
 - [ ] implement api for [endpoint "Favorites"](docs/api/Apis/FavoritesApi.md):
   - [ ] model data for /favourite endpoint
+    - run `just docs` to see the API documentation, information about the models is at the bottom of the page
   - [ ] POST   /articles/{slug}/favorite  -> Favorite an article
   - [ ] DELETE   /articles/{slug}/favorite  -> Unfavorite an article
 
 - [ ] implement api for [endpoint "Comments"](docs/api/Apis/CommentsApi.md):
   - [ ] model data for /comments endpoint, use model api docs to help:
-    - [Models/Comment](docs/api/Models/Comment.md)
-    - [Models/CreateArticleComment_200_response](docs/api/Models/CreateArticleComment_200_response.md)
-    - [Models/CreateArticleComment_request](docs/api/Models/CreateArticleComment_request.md)
-    - [Models/GetArticleComments_200_response](docs/api/Models/GetArticleComments_200_response.md)
-    - [Models/GetArticlesFeed_200_response](docs/api/Models/GetArticlesFeed_200_response.md)
-    - [Models/NewComment](docs/api/Models/NewComment.md)
+    - run `just docs` to see the API documentation, information about the models is at the bottom of the page
   - [ ] GET   /articles/{slug}/comments  -> Get comments for an article
   - [ ] POST   /articles/{slug}/comments  -> Create a comment for an article
   - [ ] DELETE   /articles/{slug}/comments/{id}  -> Delete a comment for an article
