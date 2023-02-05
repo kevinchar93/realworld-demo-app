@@ -2,7 +2,6 @@
 
 > A **backend** implementation of the "realworld" app **[YOUR_FRAMEWORK]** codebase containing real world examples (CRUD, auth, advanced patterns, etc) that adheres to the [RealWorld](https://github.com/gothinkster/realworld) spec and API.
 
-
 [Demo](https://demo.realworld.io/)&nbsp;&nbsp;&nbsp;&nbsp;[RealWorld](https://github.com/gothinkster/realworld)
 
 This codebase was created to demonstrate a fully fledged fullstack application built with **[YOUR_FRAMEWORK]** including CRUD operations, authentication, routing, pagination, and more.
@@ -10,6 +9,15 @@ This codebase was created to demonstrate a fully fledged fullstack application b
 We've gone to great lengths to adhere to the **[YOUR_FRAMEWORK]** community styleguides & best practices.
 
 For more information on how to this works with other frontends/backends, head over to the [RealWorld](https://github.com/gothinkster/realworld) repo.
+
+- [](#)
+  - [How it works](#how-it-works)
+  - [Getting started](#getting-started)
+  - [What to do](#what-to-do)
+    - [Expected functionality](#expected-functionality)
+    - [Todo list](#todo-list)
+      - [Creating a data model](#creating-a-data-model)
+      - [Creating a data access layer](#creating-a-data-access-layer)
 
 ## How it works
 
@@ -35,6 +43,7 @@ Once the implementation is complete, remove this todo section & update the docum
 
 ### Expected functionality
 
+What the [backend should support](https://realworld-docs.netlify.app/docs/implementation-creation/features) at a high level:
 * Authenticate users via JWT (login/signup pages + logout button on settings page)
 * CRU- users (sign up & settings page - no deleting required)
 * CRUD Articles
@@ -43,30 +52,14 @@ Once the implementation is complete, remove this todo section & update the docum
 * Favourite articles
 * Follow other users
 
-https://realworld-docs.netlify.app/docs/implementation-creation/features
-
-Make sure to take a look at the api docs, run `just docs`
+Make sure to take a look at the api docs, run `just docs`.
 
 ### Todo list
 
-- [ ] create a data model for the API
-    - take a look at the api documentation & absorb it
-      - think about the shape of the data you'll need to send & receive from clients each endpoint
-        - you can look at the example request body / response documented with each endpoint (each example has a schema too)
-        - you can also use the the data models / schema at the bottom of the api docs page
-        - this should help you with your data modelling
 
-    - [ ] create data models for each endpoint
-      - [ ] model for endpoint "User and Authentication"
-      - [ ] model for endpoint "Tags"
-      - [ ] model for endpoint "Profile"
-      - [ ] model for endpoint "Articles"
-      - [ ] model for endpoint "Favourites"
-      - [ ] model for endpoint "Comments"
-      - the models should represent the data you are **sending to & receiving from the client**
-        - **don't worry about how the data is stored yet** , just keep everything "in memory" for now if you have to
-      - NOTE: you don't have to wait until you have ALL data models completed before working on an endpoint
-        - *eg if you have the model for the Tags endpoint complete feel free to work on it!*
+- [ ] think about / plan the core architecture of the backend
+  - *can skip this if using a framework where this is taken care of*
+  
 
 - [ ] implement error handling for the api:
   - [ ] model data for the error handling done by the API
@@ -79,6 +72,14 @@ Make sure to take a look at the api docs, run `just docs`
 
 
 - [ ] implement api for endpoint **"User and Authentication"**:
+  - [ ] create a data model for the endpoint
+    - think about:
+      - how many entities / objects / "things" you need to model this endpoint
+      - whats the shape of the data you are **sending to & receiving from the client**
+      - what actions (methods) will need to be performed on this data 
+      - what is the shape of the data you will need to **persist** for this endpoint
+        - when you create a database table / collection what will its fields be
+      - see the section [Creating a data model](#creating-a-data-model)
   - [ ] POST /users/login -> Existing user login
   - [ ] POST  /users ->  Create a user
   - [ ] GET   /user  -> Get current user
@@ -117,3 +118,12 @@ Make sure to take a look at the api docs, run `just docs`
   - [ ] determine what fields / columns you'll have for each table / collection
   - [ ] create your database using your model
   - [ ] add database persistence to each endpoint 
+
+#### Creating a data model
+- take a look at the api documentation & absorb it
+  - think about the shape of the data you'll need to send & receive from clients for each endpoint
+  - you can look at the example request body / response documented with each endpoint (each example has a schema too)
+  - you can also use the the data models / schema at the bottom of the api docs page
+    - this should help guide your data modelling
+
+#### Creating a data access layer
